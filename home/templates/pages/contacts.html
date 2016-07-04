@@ -1,0 +1,10 @@
+{% extends 'pages/base.html'%}
+
+{% block content %}
+  {% for posts in card %}
+    <h5>{{posts.con_name}}</h5>
+    <p>{{posts.cont_number}}</p>
+    <p>{{posts.cont_address}}</p>
+    <p>{{posts.cont_location}}</p>
+  {% endfor %}
+{% endblock %}

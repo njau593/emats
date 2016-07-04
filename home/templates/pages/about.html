@@ -1,0 +1,10 @@
+{% extends 'pages/base.html'%}
+
+{% block content %}
+
+  {% for posts in us %}
+    <h1>{{posts.title}}</h1>
+    <p>{{posts.post}}</p>
+  {% endfor %}
+
+{% endblock %}

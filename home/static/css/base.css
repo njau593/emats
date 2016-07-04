@@ -1,0 +1,60 @@
+body{
+  margin: 5px;
+  background-color: #f2f2f2;
+  font-family: 'Athiti', sans-serif;
+}
+
+.top-container{
+  max-height: 500px;
+  background-color: #009900;
+}
+
+.top-container img{
+  float: left;
+}
+
+.top-container h1{
+  float: right;
+  font-family: 'Arima Madurai', cursive;
+  color: #ffffff;
+}
+
+nav{
+  clear: both;
+}
+
+nav ul{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li{
+  display: inline;
+}
+
+nav ul a{
+  display: inline-block;
+  padding: 10px;
+  background-color: #ffa600;
+  text-decoration: none;
+  color: black;
+}
+
+.foot{
+  height: 100px;
+  background-color: #75bd75;
+}
+
+.biz-footer{
+  width:50%;
+}
+
+.biz-footer img{
+  float: left;
+}
+
+.biz-footer p{
+  float: right;
+  font-size: 15pt;
+}

@@ -1,0 +1,17 @@
+{% extends 'pages/base.html' %}
+
+{% block content %}
+
+  {% for posts in profile %}
+    <h1>{{posts.prof_title}}</h1>
+    <p>{{posts.prof_text}}</p>
+  {% endfor %}
+
+  {% for posts in info %}
+    <h5>{{posts.post_author}}</h5>
+    <p>{{posts.post_pub_date}}</p>
+    <h1>{{posts.post_title}}</h1>
+    <p>{{posts.post_text}}</p>
+  {% endfor %}
+
+{% endblock %}

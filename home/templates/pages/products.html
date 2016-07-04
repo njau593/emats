@@ -1,0 +1,8 @@
+{% extends 'pages/base.html' %}
+
+{% block content %}
+  {% for posts in product %}
+    <h1>{{posts.pro_title}}</h1>
+    <p>{{posts.pro_descriiption}}</p>
+  {% endfor %}
+{% endblock %}
