@@ -2,16 +2,23 @@
 
 {% block content %}
 
-  {% for posts in profile %}
-    <h1>{{posts.prof_title}}</h1>
-    <p>{{posts.prof_text}}</p>
-  {% endfor %}
+  <div class="profile">
+    {% for posts in profile %}
+      <h1>{{posts.prof_title}}</h1>
+      <p>{{posts.prof_text}}</p>
+    {% endfor %}
+  </div>
 
-  {% for posts in info %}
-    <h5>{{posts.post_author}}</h5>
-    <p>{{posts.post_pub_date}}</p>
-    <h1>{{posts.post_title}}</h1>
-    <p>{{posts.post_text}}</p>
-  {% endfor %}
+  <div class="info">
+    <h1>Stories from Kenya</h1>
+    {% for posts in info %}
+      <div class="inner-info">
+        <h5>{{posts.post_author}}</h5>
+        <p>{{posts.post_pub_date}}</p>
+        <h3><a href="">{{posts.post_title}}</a></h3>
+        <p>{{posts.post_text}}</p>
+      </div>
+    {% endfor %}
+  </div>
 
 {% endblock %}

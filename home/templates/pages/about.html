@@ -2,9 +2,11 @@
 
 {% block content %}
 
-  {% for posts in us %}
-    <h1>{{posts.title}}</h1>
-    <p>{{posts.post}}</p>
-  {% endfor %}
+  <div class="block">
+    {% for posts in us %}
+      <h1>{{posts.title}}</h1>
+      <p class="para-block">{{posts.post}}</p>
+    {% endfor %}
+  </div>
 
 {% endblock %}

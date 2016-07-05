@@ -1,10 +1,32 @@
 {% extends 'pages/base.html'%}
 
 {% block content %}
+
+  <h1>Reach Us</h1>
+
+  <div class="facebook-plugins">
+
+    <p>Like us on Facebook</p>
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.6";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+
+    <div class="fb-page" data-href="https://www.facebook.com/EddieMorsTours" data-tabs="timeline" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false"><blockquote cite="https://www.facebook.com/EddieMorsTours" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/EddieMorsTours">Eddie Mors African Tours and Safaris</a></blockquote></div>
+
+  </div>
+
+  <div class="cont-blocks">
   {% for posts in card %}
-    <h5>{{posts.con_name}}</h5>
-    <p>{{posts.cont_number}}</p>
-    <p>{{posts.cont_address}}</p>
-    <p>{{posts.cont_location}}</p>
+      <h5>{{posts.con_name|linebreaksbr}}</h5>
+      <p>{{posts.cont_number|linebreaksbr}}</p>
+      <p>{{posts.cont_address|linebreaksbr}}</p>
+      <p>{{posts.cont_email_address|linebreaksbr}}</p>
+      <p>{{posts.cont_location|linebreaksbr}}</p>
   {% endfor %}
+  </div>
 {% endblock %}

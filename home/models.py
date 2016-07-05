@@ -35,6 +35,7 @@ class reachUs(models.Model):
     con_name=models.CharField(max_length=50, null=True)
     cont_number=models.IntegerField(null=True)
     cont_address=models.TextField(null=True)
+    cont_email_address=models.TextField(null=True)
     cont_location=models.TextField(default="Mombasa")
 
 class service(models.Model):

@@ -2,13 +2,12 @@
 
 <html>
   <head>
-    <!--<link rel="stylesheet" href="{% static 'css/blog.css' %}"/>-->
-    <link href="https://fonts.googleapis.com/css?family=Arima+Madurai|Athiti" rel="stylesheet">
-    <!--<link rel="stylesheet" href="{% static 'css/base.css' %}"/>
+    <link href="https://fonts.googleapis.com/css?family=Abel|Arima+Madurai|Katibeh|Space+Mono|Ubuntu" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/base.css' %}"/>
     <link rel="stylesheet" href="{% static 'css/home.css' %}"/>
     <link rel="stylesheet" href="{% static 'css/products.css' %}"/>
     <link rel="stylesheet" href="{% static 'css/about.css' %}"/>
-    <link rel="stylesheet" href="{% static 'css/contacts.css' %}"/>-->
+    <link rel="stylesheet" href="{% static 'css/contacts.css' %}"/>
     <title>Eddie Mors Tours and Safaris</title>
   </head>
 
@@ -18,14 +17,17 @@
         <a href=""><img src=""/></a>
         <h1>Eddie Mors Tours and Safaris.</h1>
 
-        <nav class="navbar">
-          <ul>
-            <li><a href="{% url "home" %}">Home</a></li>
-            <li><a href="{% url "products" %}">Products</a></li>
-            <li><a href="{% url "about" %}">About</a></li>
-            <li><a href="{% url "contacts" %}">Contact us</a></li>
-          </ul>
-        </nav>
+        <div class="nav-container">
+          <nav class="navbar">
+            <ul>
+              <li><a href="{% url "home" %}">Home</a></li>
+              <li><a href="{% url "about" %}">About</a></li>
+              <li><a href="{% url "products" %}">Products</a></li>
+              <li><a href="{% url "contacts" %}">Contact us</a></li>
+            </ul>
+          </nav>
+        </div>
+
       </div>
     </div>
 

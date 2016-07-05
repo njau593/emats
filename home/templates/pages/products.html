@@ -1,8 +1,13 @@
 {% extends 'pages/base.html' %}
 
 {% block content %}
+
+  <h1 class="prod-heading">Our services</h1>
+
   {% for posts in product %}
-    <h1>{{posts.pro_title}}</h1>
-    <p>{{posts.pro_descriiption}}</p>
+    <div class="prod-blocks">
+      <h3>{{posts.pro_title}}</h3>
+      <p>{{posts.pro_descriiption}}</p>
+    </div>
   {% endfor %}
 {% endblock %}
