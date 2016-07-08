@@ -37,7 +37,3 @@ class reachUs(models.Model):
     cont_address=models.TextField(null=True)
     cont_email_address=models.TextField(null=True)
     cont_location=models.TextField(default="Mombasa")
-
-class service(models.Model):
-    pro_title=models.CharField(max_length=50)
-    pro_descriiption=models.TextField()
