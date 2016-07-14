@@ -5,4 +5,4 @@ from django.db import models
 class kenyaInfo(models.Model):
     keTitle=models.CharField(max_length=20)
     keInfo=models.TextField()
-    keImage=models.ImageField(null=True)
+    keImage=models.ImageField(null=True, blank=True)

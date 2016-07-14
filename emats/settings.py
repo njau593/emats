@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'home',
     'kenya',
     'products',
+    'gallery',
 ]
 
 MIDDLEWARE_CLASSES = [

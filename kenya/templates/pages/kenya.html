@@ -1,9 +1,7 @@
 {% extends 'pages/base.html' %}
 
 {% block content %}
-    {%  for posts in kinfo %}
-      <h3>{{posts.keTitle}}</h3>
-      <p>{{posts.keInfo}}<p>
-      <img  src="{{images/serena.jpg}}" />
+    {% for infos in kinfo %}
+      <p>{{infos.keInfo}}</p>
     {% endfor %}
 {% endblock %}
