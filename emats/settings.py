@@ -39,7 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'home',
     'kenya',
-    'products'
+    'products',
 ]
 
 MIDDLEWARE_CLASSES = [
@@ -77,14 +77,14 @@ WSGI_APPLICATION = 'emats.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.9/ref/settings/#databases
 
-'''DATABASES = {
+DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
-}'''
+}
 
-DATABASES = {
+'''DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'ematsdev',
@@ -93,7 +93,7 @@ DATABASES = {
         'HOST': 'localhost',
         'PORT': '',
     }
-}
+}'''
 
 
 # Password validation

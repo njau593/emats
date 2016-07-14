@@ -2,33 +2,47 @@
 
 <html>
   <head>
-    <link href="https://fonts.googleapis.com/css?family=Abel|Arima+Madurai|Katibeh|Space+Mono|Ubuntu" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Abel|Arima+Madurai:400,800|Katibeh|Ubuntu" rel="stylesheet">
     <link rel="stylesheet" href="{% static 'css/base.css' %}"/>
     <link rel="stylesheet" href="{% static 'css/home.css' %}"/>
     <link rel="stylesheet" href="{% static 'css/products.css' %}"/>
     <link rel="stylesheet" href="{% static 'css/about.css' %}"/>
     <link rel="stylesheet" href="{% static 'css/contacts.css' %}"/>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css"/>
+
     <title>Eddie Mors Tours and Safaris</title>
   </head>
 
   <body>
+
     <div class="top-container">
-      <div class="top-display">
-        <a href=""><img src=""/></a>
+      <div id="top-display">
+        <a href=""><img src="{% static 'images/emats_logo.svg' %}"/></a>
         <h1>Eddie Mors Tours and Safaris.</h1>
 
-        <div class="nav-container">
-          <nav class="navbar">
-            <ul>
-              <li><a href="{% url "home" %}">Home</a></li>
-              <li><a href="{% url "about" %}">About</a></li>
-              <li><a href="{% url "products" %}">Products</a></li>
-              <li><a href="{% url "contacts" %}">Contact us</a></li>
-            </ul>
-          </nav>
-        </div>
-
+        <ul id="social-media">
+          <li><a href="https://www.facebook.com/EddieMorsTours/"><img src="{% static 'images/FB-FindUsonFacebook-online-114.png' %}"/></a></li>
+          <li>
+            {% for y in card %}
+              <p>{{y.cont_number|linebreaksbr}}</p>
+            {% endfor %}
+          </li>
+        </ul>
       </div>
+
+      <div id="nav-container">
+        <nav id="navbar">
+          <ul class="w3-navbar w3-green">
+            <li><a href="{% url "home" %}">Home</a></li>
+            <li><a href="{% url "about" %}">About</a></li>
+            <li><a href="{% url "products" %}">Products</a></li>
+            <li><a href="{% url "contacts" %}">Contact us</a></li>
+          </ul>
+        </nav>
+      </div>
+
     </div>
 
     {% block content %}
@@ -37,7 +51,7 @@
 
     <footer class="foot">
       <div class="biz-footer">
-        <a href=""><img src=""/></a>
+        <a href="home"><img src="{%static 'images/emats_logo.svg'%}"/></a>
         <p>Eddie Mors Tours and Safaris.</p>
       </div>
     </footer>
