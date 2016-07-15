@@ -6,7 +6,8 @@ body{
 
 .top-container{
   width: 100%;
-  background-color: rgba(255, 175, 26, 0.8);
+  /*background-color: rgba(255, 175, 26, 0.8);*/
+  background-color: #ffaf1a;
 }
 
 .top-container img{

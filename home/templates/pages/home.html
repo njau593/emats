@@ -2,6 +2,50 @@
 
 {% block content %}
 
-  
+  <div class="photos">
+    {% for img in photos %}
+      <div class="images">
+        <img src=""/>
+      </div>
+    {% endfor %}
+  </div>
+
+  <div class="methali">
+    {% for methali in misemo %}
+      <div id="methali" class="myslides w3-container w3-teal">
+        <p>{{methali.Proverb}}</p>
+        <p>{{methali.Proverb_translation}}</p>
+        <p>{{methali.Proverb_meaning}}</p>
+      </div>
+
+      <script>
+var slideIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none";
+    }
+    slideIndex++;
+    if (slideIndex > x.length) {slideIndex = 1}
+    x[slideIndex-1].style.display = "block";
+    setTimeout(carousel, 10000);
+}
+</script>
+    {% endfor %}
+  </div>
+
+  <div class="reviews">
+    {% for rev in custReview %}
+      <div class="rev">
+        <h3>{{rev.Review_title}}</h3>
+        <h6>{{rev.Review_customer_name}}</h6>
+        <img src=""/>
+        <p>{{rev.Review_narration}}</p>
+      <div>
+    {% endfor %}
+  </div>
 
 {% endblock %}

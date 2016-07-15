@@ -6,7 +6,7 @@ from django.utils import timezone
 
 def home(request):
     photos=Images.objects.all()
-    misemo=Proverbs.objects.order_by('-created_date')
+    misemo=Proverbs.objects.order_by('-Proverb_creation_date')
     custReview=Reviews.objects.all()
     return render(request, 'pages/home.html', {
         'photos':photos, 'misemo':misemo, 'custReview':custReview

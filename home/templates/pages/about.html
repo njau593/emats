@@ -2,4 +2,11 @@
 
 {% block content %}
 
+  {% for abouts in us %}
+    <div class="about">
+      <h3>{{abouts.title}}</h3>
+      <p>{{abouts.post}}</p>
+    </div>
+  {% endfor %}
+
 {% endblock %}

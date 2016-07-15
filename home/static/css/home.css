@@ -1,0 +1,23 @@
+.myslides{
+  display: none;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+#methali p{
+  font-size: 10pt;
+}
+
+.reviews{
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.rev h3, h6{
+  font-family: 'Katibeh', cursive;
+}
+
+.rev p{
+  font-size: 10pt;
+  border-bottom: 5px solid #ffaf1a;
+}

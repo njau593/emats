@@ -5,7 +5,7 @@ from django.utils import timezone
 
 #Models for home
 class Images(models.Model):
-    picture=models.ImageField(null=True, blank=True)
+    picture=models.ImageField(null=True, blank=True, upload_to='home/photos')
 
 class Proverbs(models.Model):
     Proverb_creation_date=models.DateField(default=timezone.now)
@@ -15,7 +15,7 @@ class Proverbs(models.Model):
     Proverb_meaning=models.TextField(null=False, blank=False)
 
 class Reviews(models.Model):
-    Review_title=models.TextField(null=False)
+    Review_title=models.CharField(null=False, max_length=50)
     Review_customer_name=models.CharField(null=True, blank=True, max_length=100)
     Review_narration=models.TextField(null=False)
     Review_image=models.ImageField(null=True, blank=True)
