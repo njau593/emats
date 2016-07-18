@@ -4,9 +4,11 @@
 
   <div class="photos">
     {% for img in photos %}
+
       <div class="images">
-        <img src=""/>
+        <img src="{{ img.picture.url }}"/>
       </div>
+
     {% endfor %}
   </div>
 

@@ -2,6 +2,8 @@
 
 {% block content %}
     {% for photos in picha %}
-      <img src="/home/njau/projemats/media/gallery/static/img/6f665744-7489-4f2b-bd88-180dcd8515d4.jpg"/>
+      <img src="{{ photos.Photo.url }}"/>
+      <p>{{photos.Photo_caption}}</p>
+      <p>{{photos.Photo_date}}</p>
     {% endfor %}
 {% endblock %}

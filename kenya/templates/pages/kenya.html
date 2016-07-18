@@ -2,6 +2,8 @@
 
 {% block content %}
     {% for infos in kinfo %}
-      <p>{{infos.keInfo}}</p>
+      <h3>{{infos.Title}}</h3>
+      <p>{{infos.Description}}</p>
+      <img src="{{ infos.Image.url }}"/>
     {% endfor %}
 {% endblock %}
