@@ -4,6 +4,12 @@
   margin-bottom: 20px;
 }
 
+.theSlides{
+  display: none;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
 #methali p{
   font-size: 10pt;
 }

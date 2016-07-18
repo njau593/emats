@@ -16,7 +16,7 @@
    version="1.1"
    inkscape:version="0.91 r13725"
    sodipodi:docname="emats_logo.svg"
-   inkscape:export-filename="/home/njau/projemats/media/images/emats_logo"
+   inkscape:export-filename="/home/njau/projemats/home/static/images/emats_logo"
    inkscape:export-xdpi="90"
    inkscape:export-ydpi="90">
   <title
@@ -36,10 +36,10 @@
      inkscape:pageopacity="1"
      inkscape:pageshadow="2"
      inkscape:zoom="1.4"
-     inkscape:cx="186.65736"
-     inkscape:cy="322.20921"
+     inkscape:cx="121.49395"
+     inkscape:cy="207.9235"
      inkscape:document-units="px"
-     inkscape:current-layer="layer1"
+     inkscape:current-layer="layer2"
      showgrid="false"
      units="px"
      inkscape:window-width="1535"
@@ -91,13 +91,25 @@
     </rdf:RDF>
   </metadata>
   <g
+     inkscape:groupmode="layer"
+     id="layer2"
+     inkscape:label="Layer 2">
+    <rect
+       style="fill:#ffffff;fill-opacity:1"
+       id="rect3394"
+       width="650.71429"
+       height="400.71429"
+       x="-0.71428573"
+       y="-5.6843419e-14" />
+  </g>
+  <g
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1"
      transform="translate(0,-652.36216)">
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:216.93457031px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#335aff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="font-style:normal;font-weight:normal;font-size:216.93457031px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#4caf50;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;"
        x="196.90045"
        y="699.54529"
        id="text4136"
@@ -122,7 +134,7 @@
     </g>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:203.31941223px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#335aff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="font-style:normal;font-weight:normal;font-size:203.31941223px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#4caf50;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;"
        x="396.09607"
        y="896.66302"
        id="text4144"

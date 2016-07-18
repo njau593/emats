@@ -12,8 +12,8 @@ body{
 
 .top-container img{
   float: left;
-  max-width: 50px;
-  max-height: 50px;
+  max-width: 150px;
+  max-height: 75px;
 }
 
 .top-container h1{
@@ -40,8 +40,8 @@ footer{
 }
 
 .biz-footer img{
-  max-height: 60px;
-  max-width: 60px;
+  max-height: 150px;
+  max-width: 75px;
   float: left;
 }
 

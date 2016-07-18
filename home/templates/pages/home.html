@@ -2,19 +2,43 @@
 
 {% block content %}
 
-  <div class="photos">
-    {% for img in photos %}
+  <div class="photos" class="w3-content w3-section" style="max-width:500px">
 
       <div class="images">
-        <img src="{{ img.picture.url }}"/>
+        <img class="mySlides" style="width:100%" src="{{ photos1.picture.url }}"/>
       </div>
 
-    {% endfor %}
+      <div class="images">
+        <img class="mySlides" style="width:100%" src="{{ photos2.picture.url }}"/>
+      </div>
+
+      <div class="images">
+        <img class="mySlides" style="width:100%" src="{{ photos3.picture.url }}"/>
+      </div>
+
+      <script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}
+    x[myIndex-1].style.display = "block";
+    setTimeout(carousel, 3000); // Change image every 3 seconds
+}
+</script>
+
+
   </div>
 
   <div class="methali">
     {% for methali in misemo %}
-      <div id="methali" class="myslides w3-container w3-teal">
+      <div id="methali" class="theSlides w3-container w3-red">
         <p>{{methali.Proverb}}</p>
         <p>{{methali.Proverb_translation}}</p>
         <p>{{methali.Proverb_meaning}}</p>
@@ -26,16 +50,17 @@ carousel();
 
 function carousel() {
     var i;
-    var x = document.getElementsByClassName("mySlides");
+    var x = document.getElementsByClassName("theSlides");
     for (i = 0; i < x.length; i++) {
       x[i].style.display = "none";
     }
     slideIndex++;
     if (slideIndex > x.length) {slideIndex = 1}
     x[slideIndex-1].style.display = "block";
-    setTimeout(carousel, 10000);
+    setTimeout(carousel, 2000);
 }
 </script>
+
     {% endfor %}
   </div>
 

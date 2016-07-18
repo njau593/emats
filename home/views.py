@@ -5,11 +5,14 @@ from django.utils import timezone
 # Create your views here.
 
 def home(request):
-    photos=Images.objects.all()
+    photos1=Images.objects.get(pk=1)
+    photos2=Images.objects.get(pk=2)
+    photos3=Images.objects.get(pk=3)
     misemo=Proverbs.objects.order_by('-Proverb_creation_date')
     custReview=Reviews.objects.all()
     return render(request, 'pages/home.html', {
-        'photos':photos, 'misemo':misemo, 'custReview':custReview
+        'photos1':photos1, 'photos2':photos2, 'photos3':photos3,
+        'misemo':misemo, 'custReview':custReview
     })
 
 def about(request):
