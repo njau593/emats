@@ -24,6 +24,7 @@ urlpatterns = [
     url(r'^', include('kenya.urls')),
     url(r'^', include('products.urls')),
     url(r'^', include('gallery.urls')),
+    url(r'^', include('contacts.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 '''if settings.DEBUG:

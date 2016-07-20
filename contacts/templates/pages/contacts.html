@@ -2,7 +2,7 @@
 
 {% block content %}
 
-  <h1>Reach Us</h1>
+  <h3>Reach us on social media</h3>
 
     <div id="fb-root"></div>
     <script>(function(d, s, id) {
@@ -24,5 +24,12 @@
         <p>{{cards.Contact_location|linebreaksbr}}</p>
       </div>
     {% endfor %}
+
+    <h3>Subscribe to our newsletter</h3>
+    <form role="form" action="" method="POST" class="newsletter">
+      {% csrf_token %}
+      {{ form.as_p }}
+      <button type="submit" class="w3-btn w3-green w3-border w3-round-large w3-orange">Save</button>
+    </form>
 
 {% endblock %}

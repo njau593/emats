@@ -5,7 +5,7 @@ from django.utils import timezone
 
 #Models for home
 class Images(models.Model):
-    picture=models.ImageField(null=True, blank=True, upload_to='home')
+    picture=models.ImageField(null=True,upload_to='home')
 
 class Proverbs(models.Model):
     Proverb_creation_date=models.DateField(default=timezone.now)
@@ -25,10 +25,11 @@ class aboutUs(models.Model):
     title=models.CharField(max_length=50)
     post=models.TextField(null=False)
 
-#Models for contacts
+'''#Models for contacts
 class reachUs(models.Model):
     Contact_name=models.CharField(max_length=50, null=True)
     Contact_number=models.IntegerField(null=True)
     Contact_address=models.TextField(null=True)
     Contact_email_address=models.TextField(null=True)
     Contact_location=models.TextField(null=True, blank=True)
+'''
