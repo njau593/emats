@@ -1,9 +1,26 @@
 {% extends 'pages/base.html' %}
+{% load staticfiles %}
+
 
 {% block content %}
+
+<link rel="stylesheet" href="{% static 'css/gallery.css' %}"/>
+
+  <h1>Gallery</h1>
+
+  <div class="col s6 m7 l6">
     {% for photos in picha %}
-      <img src="{{ photos.Photo.url }}"/>
-      <p>{{photos.Photo_caption}}</p>
-      <p>{{photos.Photo_date}}</p>
+      <div class="row">
+        <div class="card">
+          <div class="card-image photo">
+            <img src="{{ photos.Photo.url }}"/>
+          </div>
+          <div class="card-content">
+            <p>{{photos.Photo_caption}}</p>
+            <p>{{photos.Photo_date}}</p>
+          </div>
+        </div>
+      </div>
     {% endfor %}
+  </div>
 {% endblock %}

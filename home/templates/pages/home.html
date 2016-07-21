@@ -1,6 +1,26 @@
 {% extends 'pages/base.html' %}
+{% load staticfiles %}
 
 {% block content %}
+
+<link rel="stylesheet" href="{% static 'css/home.css' %}"/>
+
+<div class="heading card-panel green">
+  <div class="text">
+    <h1>Eddie Mors African Tours and Safaris.</h1>
+    <p>Taking you where the fun is</p>
+  </div>
+
+  <ul id="social-media">
+    <li><a href="https://www.facebook.com/EddieMorsTours/"><img src="{% static 'images/FB-FindUsonFacebook-online-114.png' %}"/></a></li>
+    <li>
+      {% for y in card %}
+        <p>{{y.cont_number|linebreaksbr}}</p>
+      {% endfor %}
+    </li>
+  </ul>
+</div>
+
 
   <div class="photos" class="w3-content w3-section" style="max-width:500px">
 
@@ -38,10 +58,10 @@ function carousel() {
 
   <div class="methali">
     {% for methali in misemo %}
-      <div id="methali" class="theSlides w3-container w3-red">
-        <p>{{methali.Proverb}}</p>
-        <p>{{methali.Proverb_translation}}</p>
-        <p>{{methali.Proverb_meaning}}</p>
+      <div id="methali" class="theSlides w3-container w3-teal row">
+        <p class="col s4">{{methali.Proverb}}</p>
+        <p class="col s4">{{methali.Proverb_translation}}</p>
+        <p class="col s4">{{methali.Proverb_meaning}}</p>
       </div>
 
       <script>
@@ -57,22 +77,28 @@ function carousel() {
     slideIndex++;
     if (slideIndex > x.length) {slideIndex = 1}
     x[slideIndex-1].style.display = "block";
-    setTimeout(carousel, 2000);
+    setTimeout(carousel, 5000);
 }
 </script>
 
     {% endfor %}
   </div>
 
-  <div class="reviews">
-    {% for rev in custReview %}
-      <div class="rev">
-        <h3>{{rev.Review_title}}</h3>
-        <h6>{{rev.Review_customer_name}}</h6>
-        <img src=""/>
-        <p>{{rev.Review_narration}}</p>
-      <div>
-    {% endfor %}
-  </div>
+<div class="col s12 m6 l8 pull-s5">
+  {% for rev in custReview %}
+    <div class="reviews row">
+        <div class="card grey lighten-3">
+          <div class="card-content black-text">
+            <div class="rev">
+              <span class="card-title"><h3>{{rev.Review_title}}</h3></span>
+              <h6>{{rev.Review_customer_name}}</h6>
+              <img src=""/>
+              <p>{{rev.Review_narration}}</p>
+            </div>
+          </div>
+        </div>
+    </div>
+  {% endfor %}
+</div>
 
 {% endblock %}

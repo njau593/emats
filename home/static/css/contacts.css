@@ -1,25 +1,18 @@
-.cont-blocks{
-  width: 250px;
-  float: left;
-  min-height: 250px;
-  border-bottom: 5px solid #4caf50;
-  margin-right: 10px;
-  margin-left: 10px;
+p{
+  font-family: 'Ubuntu', sans-serif;
+}
+
+h3{
+  font-family: 'Katibeh', cursive;
+  font-size: 4em;
   margin-top: 10px;
   margin-bottom: 10px;
-  position: relative;
-  background-color: rgba(191, 191, 191, 0.5);
 }
 
-#like, .cont-blocks h5{
-  font-family: 'Katibeh', cursive;
-  font-size: 30px;
+h5{
+  font-family: 'Abel', sans-serif;
 }
 
-.fb-page{
-  width: auto;
-}
-
-.foot{
-  clear: both;
+button{
+  font-family: 'Abel', sans-serif;
 }

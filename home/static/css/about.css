@@ -1,18 +1,11 @@
 .about h3{
-  font-family: 'Abel', sans-serif;
-  background-color: #ffaf1a;
+  font-family: 'Katibeh', sans-serif;
+  font-size: 3em;
 }
 
-p{
+.about p{
   font-family: 'Ubuntu', sans-serif;
-  font-size: 15pt;
-}
-
-.about{
-  width: 95%;
-  min-height: 250px;
-  border-bottom: 5px solid #ffaf1a;
-  margin: auto;
-  margin-top: 10px;
-  margin-bottom: 10px;
+  font-size: 1em;
+  border-bottom: 5px solid teal;
+  margin-bottom: 20px;
 }

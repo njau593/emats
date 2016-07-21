@@ -1,29 +1,44 @@
-.myslides{
-  display: none;
-  margin-top: 20px;
-  margin-bottom: 20px;
+.heading{
+  width: 100%;
+  height: 150px;
 }
 
-.theSlides{
-  display: none;
-  margin-top: 20px;
-  margin-bottom: 20px;
+.heading h1{
+  font-size: 2em;
+  font-family: 'Arima Madurai', cursive;
 }
 
-#methali p{
-  font-size: 10pt;
+.heading p{
+  font-size: 15pt;
+  font-family: 'katibeh', cursive;
+}
+
+.heading img{
+  max-width: 814px;
+  max-height: 150px;
+}
+
+.text{
+  float: left;
+}
+
+#social-media{
+  float: right;
+}
+
+.photos{
+  clear: both;
+  /*margin-left: 15%;*/
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.methali{
+  clear: both;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .reviews{
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
-
-.rev h3, h6{
-  font-family: 'Katibeh', cursive;
-}
-
-.rev p{
-  font-size: 10pt;
-  border-bottom: 5px solid #ffaf1a;
+  clear: both;
 }

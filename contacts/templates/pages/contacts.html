@@ -1,6 +1,9 @@
 {% extends 'pages/base.html'%}
+{% load staticfiles %}
 
 {% block content %}
+
+<link rel="stylesheet" href="{% static 'css/contacts.css' %}"/>
 
   <h3>Reach us on social media</h3>
 
@@ -29,7 +32,9 @@
     <form role="form" action="" method="POST" class="newsletter">
       {% csrf_token %}
       {{ form.as_p }}
-      <button type="submit" class="w3-btn w3-green w3-border w3-round-large w3-orange">Save</button>
+      <button class="btn waves-effect waves-light" type="submit" name="action">
+        <i class="material-icons right">Submit</i>
+      </button>
     </form>
 
 {% endblock %}

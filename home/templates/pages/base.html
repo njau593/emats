@@ -3,38 +3,30 @@
 <html>
   <head>
     <link href="https://fonts.googleapis.com/css?family=Abel|Arima+Madurai:400,800|Katibeh|Ubuntu" rel="stylesheet">
+
     <link rel="stylesheet" href="{% static 'css/base.css' %}"/>
     <link rel="stylesheet" href="{% static 'css/home.css' %}"/>
-    <link rel="stylesheet" href="{% static 'css/products.css' %}"/>
-    <link rel="stylesheet" href="{% static 'css/about.css' %}"/>
-    <link rel="stylesheet" href="{% static 'css/contacts.css' %}"/>
+    <script src="{% static 'script/base.js'%}"></script>
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
+
     <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css"/>
 
-    <title>Eddie Mors African Tours and Safaris</title>
+    <title>EMATS</title>
   </head>
 
   <body>
-
-    <div class="top-container">
-      <div id="top-display">
-        <a href=""><img src="{% static 'images/emats_logo' %}"/></a>
-        <h1>Eddie Mors African Tours and Safaris.</h1>
-
-        <ul id="social-media">
-          <li><a href="https://www.facebook.com/EddieMorsTours/"><img src="{% static 'images/FB-FindUsonFacebook-online-114.png' %}"/></a></li>
-          <li>
-            {% for y in card %}
-              <p>{{y.cont_number|linebreaksbr}}</p>
-            {% endfor %}
-          </li>
-        </ul>
-      </div>
-
-      <div id="nav-container">
-        <nav id="navbar">
-          <ul class="w3-navbar w3-green">
+    <header>
+      <div id="nav-container" class="navbar-fixed">
+        <nav class="nav-wrapper orange">
+          <a href="#!" class="brand-logo"><img src="{% static 'images/emats_logo' %}"/></a>
+          <ul class="right hide-on-med-and-down">
             <li><a href="{% url "home" %}">Home</a></li>
             <li><a href="{% url "about" %}">About</a></li>
             <li><a href="{% url "products" %}">Products</a></li>
@@ -44,17 +36,26 @@
           </ul>
         </nav>
       </div>
+    </header>
 
-    </div>
+    <main>
+      {% block content %}
 
-    {% block content %}
+      {% endblock %}
+    </main>
 
-    {% endblock %}
+    <footer class="page-footer green">
+      <div class="container">
+        <div class="row">
+          <a href="home"><img src="{%static 'images/emats_logo'%}"/></a>
+          <p>Eddie Mors Tours and Safaris.</p>
+        </div>
+      </div>
 
-    <footer class="foot">
-      <div class="biz-footer">
-        <a href="home"><img src="{%static 'images/emats_logo'%}"/></a>
-        <p>Eddie Mors Tours and Safaris.</p>
+      <div class="footer-copyright">
+        <div class="container">
+          2016 Njau Kariuki
+        </div>
       </div>
     </footer>
 
