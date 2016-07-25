@@ -24,12 +24,3 @@ class Reviews(models.Model):
 class aboutUs(models.Model):
     title=models.CharField(max_length=50)
     post=models.TextField(null=False)
-
-'''#Models for contacts
-class reachUs(models.Model):
-    Contact_name=models.CharField(max_length=50, null=True)
-    Contact_number=models.IntegerField(null=True)
-    Contact_address=models.TextField(null=True)
-    Contact_email_address=models.TextField(null=True)
-    Contact_location=models.TextField(null=True, blank=True)
-'''

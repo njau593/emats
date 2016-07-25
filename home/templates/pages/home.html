@@ -23,19 +23,11 @@
 
 
   <div class="photos" class="w3-content w3-section" style="max-width:500px">
-
-      <div class="images">
-        <img class="mySlides" style="width:100%" src="{{ photos1.picture.url }}"/>
+    {% for p in photos %}
+      <div class="mySlides" style="width:100%">
+        <img src="{{p.picture.url}}"/>
       </div>
-
-      <div class="images">
-        <img class="mySlides" style="width:100%" src="{{ photos2.picture.url }}"/>
-      </div>
-
-      <div class="images">
-        <img class="mySlides" style="width:100%" src="{{ photos3.picture.url }}"/>
-      </div>
-
+    {% endfor %}
       <script>
 var myIndex = 0;
 carousel();
@@ -84,21 +76,24 @@ function carousel() {
     {% endfor %}
   </div>
 
-<div class="col s12 m6 l8 pull-s5">
-  {% for rev in custReview %}
-    <div class="reviews row">
-        <div class="card grey lighten-3">
-          <div class="card-content black-text">
-            <div class="rev">
-              <span class="card-title"><h3>{{rev.Review_title}}</h3></span>
-              <h6>{{rev.Review_customer_name}}</h6>
-              <img src=""/>
-              <p>{{rev.Review_narration}}</p>
+<div class="rev">
+  <h3>Reviews</h3>
+  <div class="col s12 m6 l8 pull-s5">
+    {% for rev in custReview %}
+      <div class="reviews row">
+          <div class="card grey lighten-3">
+            <div class="card-content black-text">
+              <div class="rev">
+                <span class="card-title"><h2>{{rev.Review_title}}</h2></span>
+                <h6>{{rev.Review_customer_name}}</h6>
+                <img src=""/>
+                <p>{{rev.Review_narration}}</p>
+              </div>
             </div>
           </div>
-        </div>
-    </div>
-  {% endfor %}
+      </div>
+    {% endfor %}
+  </div>
 </div>
 
 {% endblock %}

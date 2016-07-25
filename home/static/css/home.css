@@ -42,3 +42,14 @@
 .reviews{
   clear: both;
 }
+
+.rev{
+  margin-top: 20px;
+}
+
+.rev h3{
+  font-family: 'Katibeh', cursive;
+  font-size: 4em;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}

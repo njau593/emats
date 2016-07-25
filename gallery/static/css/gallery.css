@@ -5,10 +5,18 @@ h1{
 
 p{
   font-family: 'Ubuntu', sans-serif;
-  font-size: 20pt;
+  font-size: 15pt;
 }
 
 .photo{
-  max-height: 100px;
-  max-width: 100px
+  max-height: 500px;
+  max-width: 500px;
+}
+
+.row{
+  max-width: 500px;
+  float: left;
+  margin-left: 10px;
+  margin-right: 10px;
+  position: relative;
 }

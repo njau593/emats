@@ -1,13 +1,14 @@
 {% extends 'pages/base.html' %}
 {% load staticfiles %}
 
+{% block content %}
 <link rel="stylesheet" href="{% static 'css/kenya.css' %}"/>
 
-
-{% block content %}
+  <div class="">
     {% for infos in kinfo %}
       <h3>{{infos.Title}}</h3>
       <p>{{infos.Description}}</p>
       <img src="{{ infos.Image.url }}"/>
     {% endfor %}
+  </div>
 {% endblock %}
