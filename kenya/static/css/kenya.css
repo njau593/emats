@@ -1,0 +1,12 @@
+.truncate p{
+  width:auto;
+  min-height: 200px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.photo{
+  max-height: 500px;
+  max-width: 500px;
+}

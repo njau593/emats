@@ -4,11 +4,32 @@
 {% block content %}
 <link rel="stylesheet" href="{% static 'css/kenya.css' %}"/>
 
-  <div class="">
+
+
+
+  <div class="col s12 m7">
     {% for infos in kinfo %}
-      <h3>{{infos.Title}}</h3>
-      <p>{{infos.Description}}</p>
-      <img src="{{ infos.Image.url }}"/>
+    <div class="row">
+      <div class="card">
+        <div class="card-image photo">
+          <img src="{{ infos.Image.url }}">
+          <span class="card-title">
+            <a href="{% url 'kenya_detail' pk=infos.pk %}">
+              {{infos.Title}}
+            </a>
+          </span>
+        </div>
+        <div class="card-content truncate">
+          <p>{{infos.Description}}</p>
+        </div>
+        <div class="card-action">
+          <a href="{% url 'kenya_detail' pk=infos.pk %}">Read more...</a>
+        </div>
+      </div>
+    </div>
     {% endfor %}
   </div>
+
+
+
 {% endblock %}

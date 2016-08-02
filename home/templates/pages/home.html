@@ -22,30 +22,29 @@
 </div>
 
 
-  <div class="photos" class="w3-content w3-section" style="max-width:500px">
+  <div class="photos" class="w3-content w3-section" style="max-width:1500px">
     {% for p in photos %}
       <div class="mySlides" style="width:100%">
         <img src="{{p.picture.url}}"/>
       </div>
     {% endfor %}
+
       <script>
-var myIndex = 0;
-carousel();
+        var myIndex = 0;
+        carousel();
 
-function carousel() {
-    var i;
-    var x = document.getElementsByClassName("mySlides");
-    for (i = 0; i < x.length; i++) {
-       x[i].style.display = "none";
-    }
-    myIndex++;
-    if (myIndex > x.length) {myIndex = 1}
-    x[myIndex-1].style.display = "block";
-    setTimeout(carousel, 3000); // Change image every 3 seconds
-}
-</script>
-
-
+        function carousel() {
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+            for (i = 0; i < x.length; i++) {
+               x[i].style.display = "none";
+            }
+            myIndex++;
+            if (myIndex > x.length) {myIndex = 1}
+            x[myIndex-1].style.display = "block";
+            setTimeout(carousel, 3000); // Change image every 3 seconds
+        }
+        </script>
   </div>
 
   <div class="methali">
@@ -57,21 +56,21 @@ function carousel() {
       </div>
 
       <script>
-var slideIndex = 0;
-carousel();
+        var slideIndex = 0;
+        carousel();
 
-function carousel() {
-    var i;
-    var x = document.getElementsByClassName("theSlides");
-    for (i = 0; i < x.length; i++) {
-      x[i].style.display = "none";
-    }
-    slideIndex++;
-    if (slideIndex > x.length) {slideIndex = 1}
-    x[slideIndex-1].style.display = "block";
-    setTimeout(carousel, 5000);
-}
-</script>
+        function carousel() {
+            var i;
+            var x = document.getElementsByClassName("theSlides");
+            for (i = 0; i < x.length; i++) {
+              x[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > x.length) {slideIndex = 1}
+            x[slideIndex-1].style.display = "block";
+            setTimeout(carousel, 5000);
+        }
+      </script>
 
     {% endfor %}
   </div>
@@ -86,7 +85,9 @@ function carousel() {
               <div class="rev">
                 <span class="card-title"><h2>{{rev.Review_title}}</h2></span>
                 <h6>{{rev.Review_customer_name}}</h6>
-                <img src=""/>
+                <div class="col s2">
+                  <img class="circle responsive-img" src="{{rev.Review_image.url}}"/>
+                </div>
                 <p>{{rev.Review_narration}}</p>
               </div>
             </div>

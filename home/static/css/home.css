@@ -40,7 +40,11 @@
 }
 
 .reviews{
-  clear: both;
+  max-width: 450px;
+  float: left;
+  position: relative;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 .rev{

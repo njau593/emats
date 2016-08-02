@@ -12,8 +12,10 @@
 
 
     <!-- Compiled and minified CSS -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
     <!-- Compiled and minified JavaScript -->
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
 
     <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css"/>
@@ -24,16 +26,29 @@
   <body>
     <header>
       <div id="nav-container" class="navbar-fixed">
-        <nav class="nav-wrapper orange">
-          <a href="#!" class="brand-logo"><img src="{% static 'images/emats_logo' %}"/></a>
-          <ul class="right hide-on-med-and-down">
-            <li><a href="{% url "home" %}">Home</a></li>
-            <li><a href="{% url "about" %}">About</a></li>
-            <li><a href="{% url "products" %}">Products</a></li>
-            <li><a href="{% url "info" %}">Kenya</a></li>
-            <li><a href="{% url "photos" %}">Gallery</a></li>
-            <li><a href="{% url "contacts" %}">Contact us</a></li>
-          </ul>
+        <nav>
+          <div class="nav-wrapper orange">
+            <a href="/" class="brand-logo"><img src="{% static 'images/emats_logo' %}"/></a>
+            <a href="#" data-activates="slide-out" class="button-collapse">
+              <i class="material-icons mdi-navigation-menu">menu</i>
+            </a>
+            <ul class="right hide-on-med-and-down">
+              <li><a href="{% url "home" %}">Home</a></li>
+              <li><a href="{% url "about" %}">About</a></li>
+              <li><a href="{% url "products" %}">Products</a></li>
+              <li><a href="{% url "info" %}">Kenya</a></li>
+              <li><a href="{% url "photos" %}">Gallery</a></li>
+              <li><a href="{% url "contacts" %}">Contact us</a></li>
+            </ul>
+            <ul class="side-nav" id="slide-out">
+              <li><a href="{% url "home" %}">Home</a></li>
+              <li><a href="{% url "about" %}">About</a></li>
+              <li><a href="{% url "products" %}">Products</a></li>
+              <li><a href="{% url "info" %}">Kenya</a></li>
+              <li><a href="{% url "photos" %}">Gallery</a></li>
+              <li><a href="{% url "contacts" %}">Contact us</a></li>
+            </ul>
+          </div>
         </nav>
       </div>
     </header>
@@ -43,6 +58,35 @@
 
       {% endblock %}
     </main>
+
+    <script>
+			$(document).ready(function(){
+        $('.button-collapse').sideNav({
+            menuWidth: 300, // Default is 240
+            edge: 'left', // Choose the horizontal origin
+            closeOnClick: true // Closes side-nav on <a> clicks, useful for Angular/Meteor
+          });
+  				$('.collapsible').collapsible({
+				  accordion : false // A setting that changes the collapsible behavior to expandable instead of the default accordion style
+  				});
+  				$('#aside').pushpin({ top:110, bottom:500 });
+  		});
+		</script>
+
+    <script>
+		  $(document).ready(function(){
+			$('.collapsible').collapsible({
+			  accordion : false // A setting that changes the collapsible behavior to expandable instead of the default accordion style
+			});
+			$('select').material_select();
+		  });
+	  </script>
+
+    <script>
+  		function goBack() {
+  			window.history.back()
+  		}
+	   </script>
 
     <footer class="page-footer green">
       <div class="container">
@@ -58,6 +102,5 @@
         </div>
       </div>
     </footer>
-
   </body>
 </html>

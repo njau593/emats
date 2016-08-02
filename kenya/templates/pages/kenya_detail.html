@@ -1,0 +1,14 @@
+{% extends 'pages/base.html' %}
+{% load staticfiles %}
+
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/kenya.css' %}"/>
+
+  <div class="">
+      <h3>{{det_kenya.Title}}</h3>
+      <p>{{det_kenya.Description}}</p>
+      {%if det_kenya.Image %}
+        <img src="{{ det_kenya.Image.url }}"/>
+      {% endif %}
+  </div>
+{% endblock %}
