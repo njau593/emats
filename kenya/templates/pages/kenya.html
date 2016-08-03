@@ -3,27 +3,36 @@
 
 {% block content %}
 <link rel="stylesheet" href="{% static 'css/kenya.css' %}"/>
-
-
+<script src="{%static 'scripts/succinct/jQuery.succinct.min.js' %}"></script>
+<script src="{%static 'scripts/succinct/jQuery.succinct.js' %}"></script>
 
 
   <div class="col s12 m7">
     {% for infos in kinfo %}
-    <div class="row">
-      <div class="card">
-        <div class="card-image photo">
-          <img src="{{ infos.Image.url }}">
-          <span class="card-title">
-            <a href="{% url 'kenya_detail' pk=infos.pk %}">
-              {{infos.Title}}
-            </a>
-          </span>
-        </div>
-        <div class="card-content truncate">
-          <p>{{infos.Description}}</p>
-        </div>
-        <div class="card-action">
-          <a href="{% url 'kenya_detail' pk=infos.pk %}">Read more...</a>
+    <div class="kenya">
+      <div class="row">
+        <div class="card">
+          <div class="card-image photo">
+            <img src="{{ infos.Image.url }}">
+            <span class="card-title green-text">
+              <a href="{% url 'kenya_detail' pk=infos.pk %}">
+                <h2>{{infos.Title}}<h2>
+              </a>
+            </span>
+          </div>
+          <div class="card-content">
+            <p class="minimize">{{infos.Description}}</p>
+            <script>
+              $(function(){
+                $('.minimize').succinct({
+                  size: 300
+                });
+              });
+            </script>
+          </div>
+          <div class="card-action">
+            <a href="{% url 'kenya_detail' pk=infos.pk %}">Read more...</a>
+          </div>
         </div>
       </div>
     </div>

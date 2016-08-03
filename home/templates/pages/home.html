@@ -49,10 +49,12 @@
 
   <div class="methali">
     {% for methali in misemo %}
-      <div id="methali" class="theSlides w3-container w3-teal row">
-        <p class="col s4">{{methali.Proverb}}</p>
-        <p class="col s4">{{methali.Proverb_translation}}</p>
-        <p class="col s4">{{methali.Proverb_meaning}}</p>
+      <div id="methali" class="theSlides w3-container w3-orange row">
+        <div class="white-text">
+          <p>{{methali.Proverb}}</p>
+          <p>{{methali.Proverb_translation}}</p>
+          <p>{{methali.Proverb_meaning}}</p>
+        </div>
       </div>
 
       <script>

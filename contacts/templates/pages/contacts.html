@@ -5,7 +5,9 @@
 
 <link rel="stylesheet" href="{% static 'css/contacts.css' %}"/>
 
-  <h3>Reach us on social media</h3>
+<div class="container">
+  <div class="facebook contacts">
+    <h3>Reach us on social media</h3>
 
     <div id="fb-root"></div>
     <script>(function(d, s, id) {
@@ -17,17 +19,26 @@
     }(document, 'script', 'facebook-jssdk'));</script>
 
     <div class="fb-page" data-href="https://www.facebook.com/EddieMorsTours" data-tabs="timeline" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false"><blockquote cite="https://www.facebook.com/EddieMorsTours" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/EddieMorsTours">Eddie Mors African Tours and Safaris</a></blockquote></div>
+  </div>
 
-    {% for cards in card %}
-      <div class="cont-blocks">
-        <h5>{{cards.Contact_name|linebreaksbr}}</h5>
-        <p>{{cards.Contact_number|linebreaksbr}}</p>
-        <p>{{cards.Contact_address|linebreaksbr}}</p>
-        <p>{{cards.Contact_email_address|linebreaksbr}}</p>
-        <p>{{cards.Contact_location|linebreaksbr}}</p>
+  <div class="cont-blocks contacts">
+    <h3>Contact team member</h3>
+    <div class="col s12 m5">
+      {% for cards in card %}
+      <div class="cont-card">
+        <div class="row card-panel orange">
+          <h5>{{cards.Contact_name|linebreaksbr}}</h5>
+          <p>{{cards.Contact_number|linebreaksbr}}</p>
+          <p>{{cards.Contact_address|linebreaksbr}}</p>
+          <p>{{cards.Contact_email_address|linebreaksbr}}</p>
+          <p>{{cards.Contact_location|linebreaksbr}}</p>
+        </div>
       </div>
-    {% endfor %}
+      {% endfor %}
+    </div>
+  </div>
 
+  <div class="newsletter contacts">
     <h3>Subscribe to our newsletter</h3>
     <form role="form" action="" method="POST" class="newsletter">
       {% csrf_token %}
@@ -36,5 +47,7 @@
         <i class="material-icons right">Submit</i>
       </button>
     </form>
+  </div>
+</div>
 
 {% endblock %}

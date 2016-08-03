@@ -10,3 +10,31 @@
   max-height: 500px;
   max-width: 500px;
 }
+
+.kenya{
+  max-width: 300px;
+  float: left;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.container img{
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+h3, h2{
+  font-family: 'Katibeh', cursive;
+}
+
+h3{
+  font-size: 5em;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #4caf50;
+}
+
+.minimize{
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 3em;
+}

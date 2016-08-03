@@ -4,11 +4,11 @@
 {% block content %}
 <link rel="stylesheet" href="{% static 'css/kenya.css' %}"/>
 
-  <div class="">
+  <div class="container">
       <h3>{{det_kenya.Title}}</h3>
-      <p>{{det_kenya.Description}}</p>
       {%if det_kenya.Image %}
         <img src="{{ det_kenya.Image.url }}"/>
       {% endif %}
+      <p>{{det_kenya.Description}}</p>
   </div>
 {% endblock %}
