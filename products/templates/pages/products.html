@@ -4,10 +4,14 @@
 {% block content %}
 <link rel="stylesheet" href="{% static 'css/products.css' %}"/>
 
-  {% for p in product %}
-    <img src="{{ p.product_Image.url }}"/>
-    <h3><a href="{% url 'product_detail' pk=p.pk %}">{{p.product_Title}}</a></h3>
-    <p>{{p.product_Description}}</p>
-  {% endfor %}
+<div class="container">
+  <div class="product">
+    {% for p in product %}
+      <img src="{{ p.product_Image.url }}"/>
+      <h3><a href="{% url 'product_detail' pk=p.pk %}">{{p.product_Title}}</a></h3>
+      <p>{{p.product_Description}}</p>
+    {% endfor %}
+  </div>
+</div>
 
 {% endblock %}

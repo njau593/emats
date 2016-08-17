@@ -4,13 +4,15 @@
 {% block content %}
 <link rel="stylesheet" href="{% static 'css/about.css' %}"/>
 
-  <div class="">
-    {% for abouts in us %}
-      <div class="about row comtainer">
-        <h3>{{abouts.title}}</h3>
-        <p>{{abouts.post}}</p>
-      </div>
-    {% endfor %}
+  <div class="container">
+    <div class="container">
+      {% for abouts in us %}
+        <div class="about row container">
+          <h3>{{abouts.title}}</h3>
+          <p>{{abouts.post}}</p>
+        </div>
+      {% endfor %}
+    </div>
   </div>
 
 {% endblock %}

@@ -4,25 +4,28 @@
 {% block content %}
 <link rel="stylesheet" href="{% static 'css/products.css' %}"/>
 
-  <div class="product">
+<div class="container">
+  <div class="product-des">
+    <h3>{{ prods.product_Title }}</h3>
     {% if prods.product_Image %}
       <img src="{{ prods.product_Image.url }}"/>
     {% endif %}
-    <h3>{{ prods.product_Title }}</h3>
     <p>{{ prods.product_Description }}</p>
   </div>
 
   <div class="descriptions">
     {% for d in det_product %}
-      {% if det_product.service_Image %}
-        <img src="{{ d.service_Image.url }}"/>
-      {% endif %}
-      <h3>{{d.service_Title}}</h3>
-      <p>{{d.service_Location}}</p>
-      <p>{{d.service_Type}}</p>
-      <p>{{d.service_ToBeDate}}</p>
-      <p>{{d.service_Description}}</p>
+      <div class="extend-descriptions">
+        {% if det_product.service_Image %}
+          <img src="{{ d.service_Image.url }}"/>
+        {% endif %}
+        <h3>{{d.service_Title}}</h3>
+        <p>{{d.service_Location}}</p>
+        <p>{{d.service_Type}}</p>
+        <p>{{d.service_ToBeDate}}</p>
+        <p>{{d.service_Description}}</p>
+      </div>
     {% endfor %}
   </div>
-
+</div>
 {% endblock %}
