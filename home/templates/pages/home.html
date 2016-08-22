@@ -6,7 +6,7 @@
 <link rel="stylesheet" href="{% static 'css/home.css' %}"/>
 
 <div class="heading card-panel">
-  <div class="text">
+  <div class="text container">
     <h1>Eddie Mors African Tours and Safaris.</h1>
     <p>Taking you where the fun is</p>
   </div>
@@ -22,60 +22,52 @@
 </div>
 
 
-  <div class="photos" class="w3-content w3-section" style="max-width:1500px">
-    {% for p in photos %}
-      <div class="mySlides" style="width:100%">
-        <img src="{{p.picture.url}}"/>
-      </div>
-    {% endfor %}
+<div class="the-slider">
+  <div class="slider">
+    <ul class="slides">
+      {% for p in photos %}
+        <li>
+          <img src="{{p.Picture.url}}">
+          <div class="caption center-align">
+            <h5 class="light grey-text text-lighten-3">{{p.Picture_caption}}</h5>
+          </div>
+        </li>
+      {% endfor %}
+    </ul>
 
-      <script>
-        var myIndex = 0;
-        carousel();
+    <script>
 
-        function carousel() {
-            var i;
-            var x = document.getElementsByClassName("mySlides");
-            for (i = 0; i < x.length; i++) {
-               x[i].style.display = "none";
-            }
-            myIndex++;
-            if (myIndex > x.length) {myIndex = 1}
-            x[myIndex-1].style.display = "block";
-            setTimeout(carousel, 3000); // Change image every 3 seconds
-        }
-        </script>
+    $(document).ready(function(){
+      $('.slider').slider({full_width: true});
+    });
+
+    </script>
   </div>
+</div>
 
-  <div class="methali">
-    {% for methali in misemo %}
-      <div id="methali" class="theSlides w3-container w3-orange row">
-        <div class="white-text">
-          <p>{{methali.Proverb}}</p>
-          <p>{{methali.Proverb_translation}}</p>
-          <p>{{methali.Proverb_meaning}}</p>
-        </div>
-      </div>
 
-      <script>
-        var slideIndex = 0;
-        carousel();
 
-        function carousel() {
-            var i;
-            var x = document.getElementsByClassName("theSlides");
-            for (i = 0; i < x.length; i++) {
-              x[i].style.display = "none";
-            }
-            slideIndex++;
-            if (slideIndex > x.length) {slideIndex = 1}
-            x[slideIndex-1].style.display = "block";
-            setTimeout(carousel, 5000);
-        }
-      </script>
-
-    {% endfor %}
+<div class="carousel carousel-slider center" data-indicators="true">
+  <div class="carousel-fixed-item center">
+    <a class="btn waves-effect white grey-text darken-text-2">button</a>
   </div>
+  {% for methali in misemo %}
+    <div class="carousel-item red white-text" href="#one!">
+      <p>{{methali.Proverb}}</p>
+      <p>{{methali.Proverb_translation}}</p>
+      <p>{{methali.Proverb_meaning}}</p>
+    </div>
+  {% endfor %}
+
+  <script>
+
+  $(document).ready(function(){
+    $('.carousel.carousel-slider').carousel({full_width: true});
+  });
+
+  </script>
+</div>
+
 
 <div class="rev">
   <h3>Reviews</h3>
