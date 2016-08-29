@@ -1,8 +1,0 @@
-Name:
-{{ sub_name }}
-
-Email:
-{{ sub_email }}
-
-content:
-{{ form_content|safe|striptags }}

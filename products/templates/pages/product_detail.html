@@ -14,7 +14,7 @@
   </div>
 
   <div class="descriptions">
-    {% for d in det_product %}
+      {% for d in det_product %}
       <div class="extend-descriptions">
         {% if det_product.service_Image %}
           <img src="{{ d.service_Image.url }}"/>
@@ -24,8 +24,9 @@
         <p>{{d.service_Type}}</p>
         <p>{{d.service_ToBeDate}}</p>
         <p>{{d.service_Description}}</p>
+        <p>{{d.service_Type.product_Title}}</p>
       </div>
-    {% endfor %}
+      {% endfor %}
   </div>
 </div>
 {% endblock %}

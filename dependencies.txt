@@ -1,0 +1,4 @@
+#The following packages were installed before the site could run
+
+1. Pillow
+2. Django grappelli [django-grapelli]
