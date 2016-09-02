@@ -27,4 +27,13 @@ button{
 
 .cont-card{
   max-width: 320px;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+.newsletter{
+  clear: both;
+  margin-top: 50px;
+  font-family: 'Ubuntu', sans-serif;
+  margin-bottom: 20px;
 }

@@ -6,7 +6,8 @@
 <script src="{%static 'scripts/succinct/jQuery.succinct.min.js' %}"></script>
 <script src="{%static 'scripts/succinct/jQuery.succinct.js' %}"></script>
 
-
+<div class="container">
+  <h2>Kenya: Beautiful experiences</h2>
   <div class="col s12 m7">
     {% for infos in kinfo %}
     <div class="kenya">
@@ -14,9 +15,9 @@
         <div class="card">
           <div class="card-image photo">
             <img src="{{ infos.Image.url }}">
-            <span class="card-title green-text">
+            <span class="card-title">
               <a href="{% url 'kenya_detail' pk=infos.pk %}">
-                <h2>{{infos.Title}}<h2>
+                <h4>{{infos.Title}}<h4>
               </a>
             </span>
           </div>
@@ -38,7 +39,7 @@
     </div>
     {% endfor %}
   </div>
-
+</div>
 
 
 {% endblock %}

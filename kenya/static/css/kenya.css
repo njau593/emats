@@ -23,8 +23,12 @@
   margin-bottom: 40px;
 }
 
-h3, h2{
+h3, h4{
   font-family: 'Katibeh', cursive;
+}
+
+h4{
+  color: #999966
 }
 
 h3{

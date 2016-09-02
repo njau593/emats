@@ -5,86 +5,88 @@
 
 <link rel="stylesheet" href="{% static 'css/home.css' %}"/>
 
-<div class="heading card-panel">
-  <div class="text container">
-    <h1>Eddie Mors African Tours and Safaris.</h1>
-    <p>Taking you where the fun is</p>
+<div class="container">
+  <div class="heading card-panel">
+    <div class="text container">
+      <h1>Eddie Mors African Tours and Safaris.</h1>
+      <p>Taking you where the fun is</p>
+    </div>
+
+    <ul id="social-media">
+      <li><a href="https://www.facebook.com/EddieMorsTours/"><img src="{% static 'images/FB-FindUsonFacebook-online-114.png' %}"/></a></li>
+      <li>
+        {% for y in card %}
+          <p>{{y.cont_number|linebreaksbr}}</p>
+        {% endfor %}
+      </li>
+    </ul>
   </div>
 
-  <ul id="social-media">
-    <li><a href="https://www.facebook.com/EddieMorsTours/"><img src="{% static 'images/FB-FindUsonFacebook-online-114.png' %}"/></a></li>
-    <li>
-      {% for y in card %}
-        <p>{{y.cont_number|linebreaksbr}}</p>
-      {% endfor %}
-    </li>
-  </ul>
-</div>
+
+  <div class="the-slider">
+    <div class="slider">
+      <ul class="slides">
+        {% for p in photos %}
+          <li>
+            <img src="{{p.Picture.url}}">
+            <div class="caption center-align">
+              <h5 class="light grey-text text-lighten-3">{{p.Picture_caption}}</h5>
+            </div>
+          </li>
+        {% endfor %}
+      </ul>
+
+      <script>
+
+      $(document).ready(function(){
+        $('.slider').slider({full_width: true});
+      });
+
+      </script>
+    </div>
+  </div>
 
 
-<div class="the-slider">
-  <div class="slider">
-    <ul class="slides">
-      {% for p in photos %}
-        <li>
-          <img src="{{p.Picture.url}}">
-          <div class="caption center-align">
-            <h5 class="light grey-text text-lighten-3">{{p.Picture_caption}}</h5>
-          </div>
-        </li>
-      {% endfor %}
-    </ul>
+
+  <div class="carousel carousel-slider center" data-indicators="true">
+    {% for methali in misemo %}
+      <div class="carousel-item yellow accent-2 black-text" href="#one!">
+        <p>{{methali.Proverb}}</p>
+        <p>{{methali.Proverb_translation}}</p>
+        <p>{{methali.Proverb_meaning}}</p>
+      </div>
+    {% endfor %}
 
     <script>
 
     $(document).ready(function(){
-      $('.slider').slider({full_width: true});
+      $('.carousel.carousel-slider').carousel({full_width: true});
     });
 
     </script>
   </div>
-</div>
 
 
-
-<div class="carousel carousel-slider center" data-indicators="true">
-  {% for methali in misemo %}
-    <div class="carousel-item yellow white-text" href="#one!">
-      <p>{{methali.Proverb}}</p>
-      <p>{{methali.Proverb_translation}}</p>
-      <p>{{methali.Proverb_meaning}}</p>
-    </div>
-  {% endfor %}
-
-  <script>
-
-  $(document).ready(function(){
-    $('.carousel.carousel-slider').carousel({full_width: true});
-  });
-
-  </script>
-</div>
-
-
-<div class="rev">
-  <h3>Reviews</h3>
-  <div class="col s12 m6 l8 pull-s5">
-    {% for rev in custReview %}
-      <div class="reviews row">
-          <div class="card the-card">
-            <div class="card-content black-text">
-              <div class="rev">
-                <span class="card-title"><h2>{{rev.Review_title}}</h2></span>
-                <h6>{{rev.Review_customer_name}}</h6>
-                <div class="col s2">
-                  <img class="circle responsive-img" src="{{rev.Review_image.url}}"/>
+  <div class="rev">
+    <h3>Reviews</h3>
+    <div class="col s12 m6 l8 pull-s5">
+      {% for rev in custReview %}
+        <div class="reviews row left">
+            <div class="card the-card">
+              <div class="card-content black-text">
+                <div class="rev">
+                  <span class="card-title"><h2>{{rev.Review_title}}</h2></span>
+                  <h6>{{rev.Review_customer_name}}</h6>
+                  <div class="col s2">
+                    <img class="circle responsive-img" src="{{rev.Review_image.url}}"/>
+                  </div>
+                  <p>{{rev.Review_narration}}</p>
                 </div>
-                <p>{{rev.Review_narration}}</p>
               </div>
             </div>
-          </div>
-      </div>
-    {% endfor %}
+        </div>
+      {% endfor %}
+    </div>
   </div>
 </div>
 

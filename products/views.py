@@ -11,11 +11,7 @@ def products(request):
 
 def product_detail(request, pk):
     prods=get_object_or_404(service, pk=pk)
-
-    for i in service.id:
-        if i == detailedService.service_Type_id:
-            det_product = detailedService.objects.order_by('service_ToBeDate')
-
+    det_product = detailedService.objects.all()
     return render(request, 'pages/product_detail.html', {
     'prods':prods, 'det_product':det_product
     })

@@ -6,14 +6,15 @@
 
 <link rel="stylesheet" href="{% static 'css/gallery.css' %}"/>
 
-  <h1>Gallery</h1>
+<div class="container">
+  <h2>Gallery</h2>
 
     <div class="col s6 m7 l6">
       {% for photos in picha %}
         <div class="row">
           <div class="card">
             <div class="card-image photo">
-              <img src="{{ photos.Photo.url }}"/>
+              <img class="materialboxed" src="{{ photos.Photo.url }}"/>
             </div>
             <div class="card-content">
               <p>{{photos.Photo_caption}}</p>
@@ -23,4 +24,6 @@
         </div>
       {% endfor %}
     </div>
+</div>
+
 {% endblock %}

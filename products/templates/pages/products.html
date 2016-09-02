@@ -5,9 +5,13 @@
 <link rel="stylesheet" href="{% static 'css/products.css' %}"/>
 
 <div class="container">
+  <h2>What we offer</h2>
+</div>
+
+<div class="container">
   <div class="product">
     {% for p in product %}
-      <img src="{{ p.product_Image.url }}"/>
+      <img class="materialboxed" width="100%" src="{{ p.product_Image.url }}"/>
       <h3><a href="{% url 'product_detail' pk=p.pk %}">{{p.product_Title}}</a></h3>
       <p>{{p.product_Description}}</p>
     {% endfor %}
