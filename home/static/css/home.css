@@ -33,15 +33,34 @@
 }
 
 .methali{
-  clear: both;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  margin-left: 25%;
-  margin-right: 25%;
+  max-height: 150px;
+  width: 50%;
+  float: left;
 }
 
-.carousel{
-  max-height: 150px;
+.offers{
+  width: 50%;
+  float: right;
+  border-left: 2px solid black;
+  padding: 5px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #009933;
+}
+
+.offers-inner{
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #009933;
+}
+
+.offers img{
+  width: 100%;
+  height: 250px;
+}
+
+.offers h6{
+  font-family: 'Ubuntu', cursive;
 }
 
 .rev{
@@ -64,6 +83,8 @@
   position: relative;
   margin-left: 10px;
   margin-right: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 p{

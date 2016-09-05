@@ -4,13 +4,11 @@ from django.utils import timezone
 # Create your models here.
 
 class service(models.Model):
-    product_Number = models.IntegerField(null=True, blank=False, auto_created=True)
     product_Title=models.CharField(max_length=50)
     product_Description=models.TextField()
     product_Image=models.ImageField(null=True, blank=True, upload_to='products/images')
 
 class detailedService(models.Model):
-    service_Number = models.IntegerField(null=True, blank=False)
     service_Type=models.ForeignKey(service, on_delete=models.CASCADE, default=None)
     service_Title=models.CharField(max_length=50)
     service_Description=models.TextField()

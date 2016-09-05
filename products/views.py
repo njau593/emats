@@ -15,7 +15,3 @@ def product_detail(request, pk):
     return render(request, 'pages/product_detail.html', {
     'prods':prods, 'det_product':det_product
     })
-
-
-'''det_product=detailedService.objects.all()
-det_product2=detailedService.objects.order_by('service_ToBeDate')'''
