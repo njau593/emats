@@ -12,7 +12,9 @@
   <div class="product">
     {% for p in product %}
       <img class="materialboxed" width="100%" src="{{ p.product_Image.url }}"/>
-      <h3><a href="{% url 'product_detail' pk=p.pk %}">{{p.product_Title}}</a></h3>
+      <h3><a href="{% url 'product_detail' pk=p.pk %}">
+        {{p.product_Title}}
+      </a></h3>
       <p>{{p.product_Description}}</p>
     {% endfor %}
   </div>

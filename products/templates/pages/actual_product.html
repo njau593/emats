@@ -1,0 +1,16 @@
+{% extends 'pages/base.html' %}
+{% load staticfiles %}
+
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/products.css' %}"/>
+
+<div class="container">
+  <h3>{{ events.service_Title}}</h3>
+  <p><em>To be held on: {{ events.service_ToBeDate }}</em></p>
+  {% if events.service_Image %}
+    <img class="materialboxed" width="100%" src="{{ events.service_Image.url }}"/>
+  {% endif %}
+  <p>{{ events.service_Description }}</p>
+  <p><em>Location: {{ events.service_Location}}</em></p>
+</div>
+{% endblock %}

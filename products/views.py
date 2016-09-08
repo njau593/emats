@@ -1,6 +1,5 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_list_or_404, get_object_or_404
 from .models import detailedService, service
-from django.shortcuts import render, get_object_or_404
 
 # Create your views here.
 def products(request):
@@ -14,4 +13,10 @@ def product_detail(request, pk):
     det_product = detailedService.objects.all()
     return render(request, 'pages/product_detail.html', {
     'prods':prods, 'det_product':det_product
+    })
+
+def actual_product(request, pk):
+    events = get_object_or_404(detailedService, pk=pk)
+    return render(request, 'pages/actual_product.html', {
+    'events':events
     })

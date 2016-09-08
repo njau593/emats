@@ -69,11 +69,11 @@
 
   <div class="offers">
     {% for o in offer %}
-      <div class="offers-inner">
+      <div class="offers-inner card-panel small">
         {% if o.service_Image %}
           <img src="{{o.service_Image.url}}"/>
         {% endif %}
-        <h6>{{o.service_Title}}<h6>
+        <h6><a href="{% url 'actual_product' pk=o.pk %}">{{o.service_Title}}</a><h6>
       </div>
     {% endfor %}
   </div>

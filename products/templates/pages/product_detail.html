@@ -16,11 +16,13 @@
   <div class="descriptions">
     {% for d in det_product %}
       {% if prods.product_Title == d.service_Type.product_Title %}
-      <div class="extend-descriptions">
+      <div class="extend-descriptions card-panel">
         {% if det_product.service_Image %}
           <img class="materialboxed" width="100%" src="{{ d.service_Image.url }}"/>
         {% endif %}
-        <h3>{{d.service_Title}}</h3>
+        <h3><a href="{% url 'actual_product' pk=d.pk %}">
+          {{d.service_Title}}
+        </a></h3>
         <p>{{d.service_Location}}</p>
         <p>{{d.service_Type}}</p>
         <p>{{d.service_ToBeDate}}</p>
